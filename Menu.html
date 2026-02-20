@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash Weds Khusi | Wedding Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --gold: #e5c56f;
+    --gold-soft: #f3e2b4;
+    --gold-deep: #b8891f;
+    --maroon: #681428;
+    --dark-maroon: #2b0610;
+    --wine: #4a0d1a;
+    --ivory: #fffaf0;
+    --text: #f8f2e7;
+    --card-bg: rgba(255, 250, 240, 0.06);
+    --card-border: rgba(229, 197, 111, 0.42);
+    --glow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(229, 197, 111, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(255, 250, 240, 0.08), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(229, 197, 111, 0.1), transparent 40%),
+        linear-gradient(140deg, #20040b 0%, var(--dark-maroon) 35%, var(--wine) 70%, var(--maroon) 100%);
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Decorative Background Pattern */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.12;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, transparent 45%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: -1;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--card-border);
+    position: relative;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 6vw, 4.4rem);
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: clamp(0.9rem, 2.1vw, 1.15rem);
+    margin-top: 12px;
+    font-weight: 400;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    opacity: 0.95;
+}
+
+.scroll-btn {
+    margin-top: 44px;
+    padding: 14px 36px;
+    border: 1px solid var(--gold-deep);
+    background: linear-gradient(135deg, rgba(229, 197, 111, 0.15), rgba(184, 137, 31, 0.12));
+    color: var(--gold-soft);
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+    color: #3f0a16;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* MENU SECTION */
+
+.menu {
+    padding: clamp(70px, 9vw, 110px) min(12%, 120px);
+    position: relative;
+}
+
+.menu-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    color: var(--gold);
+    margin-bottom: 68px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.menu-title::before,
+.menu-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: min(22%, 150px);
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.menu-title::before {
+    left: 0;
+}
+
+.menu-title::after {
+    right: 0;
+}
+
+.category {
+    margin-bottom: 54px;
+    padding: 40px;
+    border: 1px solid var(--card-border);
+    background:
+        linear-gradient(140deg, rgba(255, 250, 240, 0.07), rgba(255, 250, 240, 0.025)),
+        var(--card-bg);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    box-shadow: var(--glow);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.category:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 26px 56px rgba(0, 0, 0, 0.42);
+    border-color: rgba(243, 226, 180, 0.6);
+}
+
+.category::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(229, 197, 111, 0.08) 45%, transparent 100%);
+    pointer-events: none;
+}
+
+.category h3 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.25rem, 2.8vw, 1.95rem);
+    color: var(--gold);
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 1px solid rgba(229, 197, 111, 0.45);
+    padding-bottom: 8px;
+}
+
+.menu-list {
+    columns: 2;
+    column-gap: clamp(24px, 6vw, 80px);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    break-inside: avoid;
+    border-bottom: 1px dashed rgba(243, 226, 180, 0.2);
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.menu-item:hover {
+    color: var(--gold-soft);
+    transform: translateX(4px);
+}
+
+.dish-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(229, 197, 111, 0.52);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-item:hover .dish-img {
+    transform: scale(1.06);
+    border-color: var(--gold-soft);
+}
+
+.footer {
+    text-align: center;
+    padding: 42px 10%;
+    border-top: 1px solid rgba(229, 197, 111, 0.33);
+    letter-spacing: 2px;
+    font-size: 0.92rem;
+    color: rgba(255, 250, 240, 0.88);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0));
+}
+
+/* Scroll Animation */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 768px) {
+    .hero h2 {
+        letter-spacing: 4px;
+    }
+
+    .menu {
+        padding: 70px 6%;
+    }
+
+    .category {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .menu-list {
+        columns: 1;
+    }
+
+    .menu-title::before,
+    .menu-title::after {
+        display: none;
+    }
+
+    .dish-img {
+        width: 54px;
+        height: 54px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Akash Weds Khusi</h1>
+    <h2>Wedding Celebration</h2>
+    <button class="scroll-btn" onclick="scrollToMenu()">View Feast</button>
+</section>
+
+<section class="menu" id="menuSection">
+
+<div class="menu-title">The Grand Wedding Feast</div>
+
+<div class="category fade-in">
+    <h3>Welcome Drinks</h3>
+    <div class="menu-list">
+        <div class="menu-item"><img class="dish-img" src="/assets/kesar.jpg" alt="Kesar Badam Milk">Kesar Badam Milk</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/aam.jpg" alt="Rose Sharbat">Rose Sharbat</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/lime.jpg" alt="Fresh Lime Soda">Fresh Lime Soda</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/aam.jpg" alt="Aam Panna">Aam Panna</div>
+    </div>
+</div>
+
+<div class="category fade-in">
+    <h3>Starters</h3>
+    <div class="menu-list">
+        <div class="menu-item"><img class="dish-img" src="/assets/paneer-tikka-2.jpg" alt="Paneer Tikka">Paneer Tikka</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/4x3-hara-bhara-kabab.jpg" alt="Hara Bhara Kebab">Hara Bhara Kebab</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/dahi-puri.jpg" alt="Dahi Puri">Dahi Puri</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/veg-manchurian.jpg" alt="Veg Manchurian">Veg Manchurian</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/chicken-tandoori.jpg" alt="Chicken Tandoori">Chicken Tandoori</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/fish.jpg" alt="Fish Amritsari">Fish Amritsari</div>
+    </div>
+</div>
+
+<div class="category fade-in">
+    <h3>Main Course</h3>
+    <div class="menu-list">
+        <div class="menu-item"><img class="dish-img" src="/assets/Dal-Makhani-Blog.jpg" alt="Dal Makhani">Dal Makhani</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/shahi-paneer.jpg" alt="Shahi Paneer">Shahi Paneer</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/malai-kofta.jpg" alt="Malai Kofta">Malai Kofta</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/butter-chicken.jpg" alt="Butter Chicken">Butter Chicken</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/mutton.jpg" alt="Mutton Rogan Josh">Mutton Rogan Josh</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/hyderabad biryani.jpg" alt="Hyderabadi Biryani">Hyderabadi Biryani</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/jeera-rice.jpg" alt="Jeera Rice">Jeera Rice</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/breads.jpg" alt="Assorted Indian Breads">Assorted Indian Breads</div>
+    </div>
+</div>
+
+<div class="category fade-in">
+    <h3>Desserts</h3>
+    <div class="menu-list">
+        <div class="menu-item"><img class="dish-img" src="/assets/gulab jamun.jpg" alt="Gulab Jamun">Gulab Jamun</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/rasgulla.jpg" alt="Rasgulla">Rasgulla</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/jalebi.jpg" alt="Jalebi with Rabri">Jalebi with Rabri</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/kaju.jpg" alt="Kaju Katli">Kaju Katli</div>
+        <div class="menu-item"><img class="dish-img" src="/assets/ice.jpg" alt="Ice Cream Counter">Ice Cream Counter</div>
+    </div>
+</div>
+
+</section>
+
+<div class="footer">
+With Love & Blessings • Akash & Khusi • 2026
+</div>
+
+<script>
+function scrollToMenu() {
+    document.getElementById("menuSection").scrollIntoView({ behavior: "smooth" });
+}
+
+const elements = document.querySelectorAll('.fade-in');
+
+function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
